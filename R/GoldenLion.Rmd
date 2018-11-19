@@ -7,13 +7,12 @@ library(rvest)
 # We will read the data from the wikipedia page of Leone d'oro
 'https://it.wikipedia.org/wiki/Leone_d%27oro_al_miglior_film' %>%
   read_html() %>% # parse it as html
-  html_nodes(".wikitable") %>% # extract the node associated to the css selector "wikitable" (and use the . to search for it)
+  html_node(".wikitable") %>% # extract the node associated to the css selector "wikitable" (and use the . to search for it)
   html_table(fill=T) %>% # extract its content as a table and fill in missing values
-  .[[1]] %>% # html_table returns a list of dataframes, we extract the first element
   filter(!str_detect(Film, 'non [venne||fu]')) %>% # remove the rows associated to no price
   separate_rows(Nazione, sep = "/\\s?") %>% # split the rows with multiple nationalities using the "/" and maybe a whitespace
-  count(Nazione, sort = TRUE) %>% #count grouped by Nazione and sort it
-  rename(Vincitori=n) -> Winners #change the count name "n" to "Vincitori" and define our nice final dataset
+  count(Nazione, sort = T) %>% #count grouped by Nazione and sort it
+  rename(Vincitori = n) -> Winners #change the count name "n" to "Vincitori" and define our nice final dataset
 
 write_csv(Winners, "Winners.csv")
 
