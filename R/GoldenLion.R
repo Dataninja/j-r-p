@@ -39,7 +39,14 @@ write_csv(x = pivot_df, path = "R/Countries.csv")
 g <- ggplot(data = pivot_df,
             aes(x = reorder(Paese,Vincitori), y = Vincitori)) +
   geom_bar(stat='identity') +
+  labs(x= "Paese vincitore",
+       y="Numero di vittorie",
+       title="Vincitori per paese d'origine",
+       caption= "Fonte: Wikipedia")+
+  
   coord_flip()
 
-#Salvataggio grafico in png
+
+# Salvataggio grafico in png ----------------------------------------------
+
 ggsave(filename = "R/plot.png", device = "png")
