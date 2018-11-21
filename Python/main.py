@@ -42,7 +42,7 @@ for record in records:
 dataframe = pd.DataFrame(corrected_records)
 
 # salviamo in CSV
-dataframe.to_csv('leoni.csv', index=None, quoting=True, encoding='utf8')
+dataframe.to_csv('leoni.csv', index=None, quoting=1, encoding='utf8')
 
 # pivot per contare i vincitori di ogni nazione
 pivot = dataframe.groupby('Nazione').size().reset_index(name='Vincitori')
