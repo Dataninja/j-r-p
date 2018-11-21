@@ -18,28 +18,27 @@ dataframe = tables[0]
 # dobbiamo inoltre cancellare le righe riguardanti gli anni in cui non sono stati assegnati premi
 # 1 - convertiamo il dataframe in una lista di dizionari
 records = dataframe.to_dict(orient='records')
-# 2 - sistemiamo i record difettosi
-corrected_records = []
-current_year = None
-for record in records:
-
-    if ('mostra non fu' in record['Film']) or ('non venne assegnato') in record['Film']:
-        continue
-
-    if not record['Anno'].isdigit():
-        corrected_record = {
-            'Anno'    : current_year,
-            'Film'    : record['Anno'],
-            'Regista' : record['Film'],
-            'Nazione' : record['Regista']
+# 2 - sistemiamo i record difettosi con una tanto incomprensibile quanto affascinante combinazione di list comprehension e dictionary unpacking
+records = [item for sublist in [
+    [
+        {
+            **record,
+            'Anno'    : record['Anno'] if record['Anno'].isdigit() else records[index-1]['Anno'],
+            'Film'    : record['Film'] if record['Anno'].isdigit() else record['Anno'],
+            'Regista' : record['Regista'] if record['Anno'].isdigit() else record['Film'],
+            'Nazione' : country
         }
-        corrected_records.append(corrected_record)
-    else:
-        current_year = record['Anno']
-        corrected_records.append(record)
+        for country in [
+            c.strip()
+            for c in (record['Nazione'] if record['Anno'].isdigit() else record['Regista']).split('/')
+        ]
+    ]
+    for index, record in enumerate(records)
+    if ('mostra non fu' not in record['Film']) and ('non venne assegnato' not in record['Film'])
+] for item in sublist]
 
 # 3 - riconvertiamo i dizionari in dataframe
-dataframe = pd.DataFrame(corrected_records)
+dataframe = pd.DataFrame(records)
 
 # salviamo in CSV
 dataframe.to_csv('leoni.csv', index=None, quoting=1, encoding='utf8')
