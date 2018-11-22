@@ -52,4 +52,4 @@ nazioni_count.to_csv('leoni-nazioni.csv',  encoding='utf8')
 
 # Crea bar e salva
 nazioni_count.plot(kind='barh',figsize=(10,10), width=0.8, color=['#DF1B3B','#333333']).invert_yaxis()
-plt.savefig('leoni-nazione.png')
+plt.savefig('leoni-nazioni.png')
