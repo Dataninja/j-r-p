@@ -12,7 +12,7 @@
 # accedi alla pagina
 curl "https://it.wikipedia.org/wiki/Leone_d%27oro_al_miglior_film" | \
 # filtra soltantto i record della tabella con i leoni e estraila in JSON
-pup 'div.mw-parser-output > table.wikitable > tbody > tr:not(:first-child) json{}' >./raw.json
+pup --charset utf-8 -p 'div.mw-parser-output > table.wikitable > tbody > tr:not(:first-child) json{}' >./raw.json
 # estrai anni
 <./raw.json jq '[.[].children | select(.|length > 2)] | {anno:.[][0].children[0].text}' | mlr --j2c cat >./anni.csv
 # estrai titoli per anni con un solo vincitore
