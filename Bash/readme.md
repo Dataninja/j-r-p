@@ -24,7 +24,7 @@ paste  -d "," ./leoni_tmp.csv ./nazioni.csv > ./leoni.csv
 # rimuovi file inutili
 rm ./leoni_tmp.csv
 # crea file con conteggio per nazioni
-mlr --csv cut -o -f nazione then nest --explode --values --across-records -f nazione --nested-fs : then count-distinct -f nazione -o conteggio then sort -nr conteggio ./leoni.csv > leoniNazione.csv
+mlr --csv cut -o -f nazione then nest --explode --values --across-records -f nazione --nested-fs : then count-distinct -f nazione -o conteggio then sort -nr conteggio ./leoni.csv > ./leoniNazione.csv
 ```
 
 ## output
