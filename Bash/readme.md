@@ -2,10 +2,10 @@
 
 ## requisiti
 
-- il gigante [curl](https://curl.haxx.se/);
-- il comodo [pup](https://github.com/ericchiang/pup);
-- il magico [jq](https://stedolan.github.io/jq/);
-- l'incredibile [miller](https://github.com/johnkerl/miller).
+- [curl](https://curl.haxx.se/);
+- [pup](https://github.com/ericchiang/pup);
+- [jq](https://stedolan.github.io/jq/);
+- [miller](https://github.com/johnkerl/miller).
 
 
 ```bash
