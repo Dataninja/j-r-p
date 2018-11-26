@@ -70,7 +70,7 @@ df = append!(df1,df2);
 headers = nodeText(tabella[1][1][1]);
 headers= split(headers);
 names!(df, Symbol.([headers[4],headers[1]]));
-df = unique(df, [:Nazione,:Anno]); # eliminiamo il problema delle annate con doppio vincitore della stessa nazionalità
+#df = unique(df, [:Nazione,:Anno]); # eliminiamo il problema delle annate con doppio vincitore della stessa nazionalità
 
 graph_data = by(df, :Nazione, nrow); # groupby per conteggio delle occorrenze di ciascuna nazione
 graph_data = sort!(graph_data, :x1, rev=true); #sort dal più alto al più basso
