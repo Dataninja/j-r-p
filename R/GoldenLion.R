@@ -13,7 +13,7 @@ table_df <- 'https://it.wikipedia.org/wiki/Leone_d%27oro_al_miglior_film' %>%
   rename(Paese=Nazione) #to fix in it.wikipedia too
 
 #Scrivi CSV
-write_csv(x = table_df, path = "R/Winners.csv") 
+write_csv(x = table_df, path = "./Winners.csv") 
 
 
 #Creazione pivot ----------------------------------------------------------------
@@ -24,7 +24,7 @@ pivot_df <-  table_df %>%
              rename(Vincitori = n)
   
 #Scrivi CSV
-write_csv(x = pivot_df, path = "R/Countries.csv")
+write_csv(x = pivot_df, path = "./Countries.csv")
 
 # Creazione grafico a barre -----------------------------------------------
 
@@ -44,4 +44,4 @@ chart <- ggplot(data = pivot_df,
 
 # Salvataggio grafico in png ----------------------------------------------
 
-ggsave(plot = chart, filename = "R/plot.png", device = "png")
+ggsave(plot = chart, filename = "./plot.png", device = "png")
