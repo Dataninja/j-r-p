@@ -33,6 +33,7 @@ mlr --csv cut -o -f Nazione \
 then nest --explode --values --across-records -f Nazione --nested-fs "|" \
 then count-distinct -f Nazione -o Conteggio \
 then sort -nr Conteggio leoni.csv >./leoniNazione.csv
+
 # crea l'istogramma
 <./leoniNazione.csv Rio -ge 'g+geom_col(aes(x = reorder(Nazione, Conteggio), y = Conteggio)) + coord_flip() + labs(x = "Nazioni")' > ./leoniNazione.png
 ```
