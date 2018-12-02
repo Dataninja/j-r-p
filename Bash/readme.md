@@ -3,6 +3,7 @@
 - [Estrarre i Leoni d'oro da Wikipedia a riga di comando](#estrarre-i-leoni-doro-da-wikipedia-a-riga-di-comando)
     - [requisiti](#requisiti)
     - [Tempo di esecuzione](#tempo-di-esecuzione)
+    - [Output](#output)
     - [Script bash](#script-bash)
     - [output tabellare](#output-tabellare)
     - [output grafico](#output-grafico)
@@ -20,6 +21,12 @@
 ## Tempo di esecuzione
 
 Compreso il download della pagina circa 3.8 secondi.
+
+## Output
+
+- [leoni.csv](./leoni.csv), tabella con i vincitori nei vari anni;
+- [leoniNazione.csv](./leoniNazione.csv), tabella che conteggia i leoni per nazione;
+- [leoniNazione.png](./leoniNazione.png), grafico a barre con il conteggio dei leoni per nazione.
 
 ## Script bash
 
