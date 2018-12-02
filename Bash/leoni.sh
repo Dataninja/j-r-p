@@ -3,6 +3,7 @@
 ### requisiti ###
 # htmltable2flatgrid https://github.com/aborruso/htmltable2flatgrid/blob/master/htmltable2flatgrid.py
 # miller http://johnkerl.org/miller/doc/
+# Rio https://github.com/jeroenjanssens/data-science-at-the-command-line/blob/master/tools/Rio
 ### requisiti ###
  
 # estrai la terza tabella dalla pagina di wikipedia
@@ -29,3 +30,6 @@ mlr --csv cut -o -f Nazione \
 then nest --explode --values --across-records -f Nazione --nested-fs "|" \
 then count-distinct -f Nazione -o Conteggio \
 then sort -nr Conteggio leoni.csv >./leoniNazione.csv
+
+# crea l'istogramma
+<./leoniNazione.csv Rio -ge 'g+geom_col(aes(x = reorder(Nazione, Conteggio), y = Conteggio)) + coord_flip() + labs(x = "Nazioni")' > ./leoniNazione.png
