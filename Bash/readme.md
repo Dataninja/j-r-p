@@ -1,18 +1,18 @@
 <!-- TOC -->
 
 - [Estrarre i Leoni d'oro da Wikipedia a riga di comando](#estrarre-i-leoni-doro-da-wikipedia-a-riga-di-comando)
-    - [requisiti](#requisiti)
+    - [Requisiti](#requisiti)
     - [Tempo di esecuzione](#tempo-di-esecuzione)
     - [Output](#output)
     - [Script bash](#script-bash)
-    - [output tabellare](#output-tabellare)
-    - [output grafico](#output-grafico)
+    - [Output tabellare](#output-tabellare)
+    - [Output grafico](#output-grafico)
 
 <!-- /TOC -->
 
 # Estrarre i Leoni d'oro da Wikipedia a riga di comando
 
-## requisiti
+## Requisiti
 
 - [htmltable2flatgrid](https://github.com/aborruso/htmltable2flatgrid)
 - [miller](https://github.com/johnkerl/miller);
@@ -60,7 +60,7 @@ then sort -nr Conteggio leoni.csv >./leoniNazione.csv
 <./leoniNazione.csv Rio -ge 'g+geom_col(aes(x = reorder(Nazione, Conteggio), y = Conteggio)) + coord_flip() + labs(x = "Nazioni")' > ./leoniNazione.png
 ```
 
-## output tabellare
+## Output tabellare
 
 | nazione | conteggio |
 | --- | --- |
@@ -90,6 +90,6 @@ then sort -nr Conteggio leoni.csv >./leoniNazione.csv
 | Filippine | 1 |
 | Messico | 1 |
 
-## output grafico
+## Output grafico
 
 ![](./leoniNazione.png)
