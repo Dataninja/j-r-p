@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ### requisiti ###
-# htmltable2flatgrid https://github.com/aborruso/htmltable2flatgrid/blob/master/htmltable2flatgrid.py
+# htmltable2flatgrid https://github.com/aborruso/htmltable2flatgrid
 # miller http://johnkerl.org/miller/doc/
 # Rio https://github.com/jeroenjanssens/data-science-at-the-command-line/blob/master/tools/Rio
 ### requisiti ###

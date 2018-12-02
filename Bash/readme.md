@@ -2,7 +2,7 @@
 
 ## requisiti
 
-- [htmltable2flatgrid](https://github.com/aborruso/htmltable2flatgrid/blob/master/htmltable2flatgrid.py)
+- [htmltable2flatgrid](https://github.com/aborruso/htmltable2flatgrid)
 - [miller](https://github.com/johnkerl/miller);
 - [Rio](https://github.com/jeroenjanssens/data-science-at-the-command-line/blob/master/tools/Rio).
 
