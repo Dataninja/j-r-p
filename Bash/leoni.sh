@@ -1,11 +1,11 @@
- #!/bin/bash
+#!/bin/bash
 
- ### requisiti ###
- # htmltable2flatgrid https://github.com/aborruso/htmltable2flatgrid/blob/master/htmltable2flatgrid.py
- # miller http://johnkerl.org/miller/doc/
- ### requisiti ###
+### requisiti ###
+# htmltable2flatgrid https://github.com/aborruso/htmltable2flatgrid/blob/master/htmltable2flatgrid.py
+# miller http://johnkerl.org/miller/doc/
+### requisiti ###
  
- # estrai la terza tabella dalla pagina di wikipedia
+# estrai la terza tabella dalla pagina di wikipedia
 htmltable2flatgrid.py "https://it.wikipedia.org/wiki/Leone_d%27oro_al_miglior_film" 2
 
 

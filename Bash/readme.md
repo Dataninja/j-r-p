@@ -8,7 +8,7 @@
 ## Script bash
 
 ```bash
- # estrai la terza tabella dalla pagina di wikipedia
+# estrai la terza tabella dalla pagina di wikipedia
 htmltable2flatgrid.py "https://it.wikipedia.org/wiki/Leone_d%27oro_al_miglior_film" 2
 
 
