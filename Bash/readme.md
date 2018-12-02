@@ -37,7 +37,7 @@ then sort -nr Conteggio leoni.csv >./leoniNazione.csv
 <./leoniNazione.csv Rio -ge 'g+geom_col(aes(x = reorder(Nazione, Conteggio), y = Conteggio)) + coord_flip() + labs(x = "Nazioni")' > ./leoniNazione.png
 ```
 
-## output
+## output tabellare
 
 | nazione | conteggio |
 | --- | --- |
@@ -66,3 +66,7 @@ then sort -nr Conteggio leoni.csv >./leoniNazione.csv
 | Venezuela | 1 |
 | Filippine | 1 |
 | Messico | 1 |
+
+## output grafico
+
+![](./leoniNazione.png)
