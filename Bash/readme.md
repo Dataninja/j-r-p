@@ -1,3 +1,14 @@
+<!-- TOC -->
+
+- [Estrarre i Leoni d'oro da Wikipedia a riga di comando](#estrarre-i-leoni-doro-da-wikipedia-a-riga-di-comando)
+    - [requisiti](#requisiti)
+    - [Tempo di esecuzione](#tempo-di-esecuzione)
+    - [Script bash](#script-bash)
+    - [output tabellare](#output-tabellare)
+    - [output grafico](#output-grafico)
+
+<!-- /TOC -->
+
 # Estrarre i Leoni d'oro da Wikipedia a riga di comando
 
 ## requisiti
@@ -5,6 +16,10 @@
 - [htmltable2flatgrid](https://github.com/aborruso/htmltable2flatgrid)
 - [miller](https://github.com/johnkerl/miller);
 - [Rio](https://github.com/jeroenjanssens/data-science-at-the-command-line/blob/master/tools/Rio).
+
+## Tempo di esecuzione
+
+Compreso il download della pagina circa 3.8 secondi.
 
 ## Script bash
 
