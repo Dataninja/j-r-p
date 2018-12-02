@@ -20,7 +20,7 @@
 
 ## Tempo di esecuzione
 
-Compreso il download della pagina circa 3.8 secondi.
+Circa 3.8 secondi (compreso il download della pagina Wikipedia).
 
 ## Output
 
