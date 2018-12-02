@@ -11,8 +11,8 @@
 htmltable2flatgrid.py "https://it.wikipedia.org/wiki/Leone_d%27oro_al_miglior_film" 2
 
 
-# estrai soltanto gli anni con il premio assegnato
-# rimuovi righe con anni zenza vincitori
+# estrai soltanto gli anni con il premio assegnato, quelli con il nome del regista
+# fa il fill-down per la colonna anno
 # normalizza il separatore degli anni con più nazioni vincitrici
 
 tail -n +2 ./table.csv | \
