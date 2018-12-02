@@ -3,10 +3,10 @@
 - [Estrarre i Leoni d'oro da Wikipedia a riga di comando](#estrarre-i-leoni-doro-da-wikipedia-a-riga-di-comando)
     - [Requisiti](#requisiti)
     - [Tempo di esecuzione](#tempo-di-esecuzione)
-    - [Output](#output)
+    - [File di output](#file-di-output)
     - [Script bash](#script-bash)
-    - [Output tabellare](#output-tabellare)
-    - [Output grafico](#output-grafico)
+    - [Anteprima output tabellare](#anteprima-output-tabellare)
+    - [Anteprima output grafico](#anteprima-output-grafico)
 
 <!-- /TOC -->
 
@@ -22,7 +22,7 @@
 
 Circa 3.8 secondi (compreso il download della pagina Wikipedia).
 
-## Output
+## File di output
 
 - [leoni.csv](./leoni.csv), tabella con i vincitori nei vari anni;
 - [leoniNazione.csv](./leoniNazione.csv), tabella che conteggia i leoni per nazione;
@@ -60,7 +60,7 @@ then sort -nr Conteggio leoni.csv >./leoniNazione.csv
 <./leoniNazione.csv Rio -ge 'g+geom_col(aes(x = reorder(Nazione, Conteggio), y = Conteggio)) + coord_flip() + labs(x = "Nazioni")' > ./leoniNazione.png
 ```
 
-## Output tabellare
+## Anteprima output tabellare
 
 | nazione | conteggio |
 | --- | --- |
@@ -90,6 +90,6 @@ then sort -nr Conteggio leoni.csv >./leoniNazione.csv
 | Filippine | 1 |
 | Messico | 1 |
 
-## Output grafico
+## Anteprima output grafico
 
 ![](./leoniNazione.png)
