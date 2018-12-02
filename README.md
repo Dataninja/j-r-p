@@ -1,6 +1,6 @@
 # Julia's dreams 'R' full of Bashful Pythons
 
-Tre sviluppatori, tre linguaggi, un singolo task di web scraping ed elaborazione dati. Non importa la lunghezza del codice o i moduli open source usati, ma la leggibilità e la facilità di comprensione del codice da parte di un neofita.
+Tre sviluppatori (più un utente), tre linguaggi (più una shell), un singolo task di web scraping ed elaborazione dati. Non importa la lunghezza del codice o i moduli open source usati, ma la leggibilità e la facilità di comprensione del codice da parte di un neofita.
 
 ## Task
 
