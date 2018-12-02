@@ -12,9 +12,9 @@
 htmltable2flatgrid.py "https://it.wikipedia.org/wiki/Leone_d%27oro_al_miglior_film" 2
 
 
-# estrai soltanto gli anni con il premio assegnato, quelli con il nome del regista
+# estrai soltanto i record con il premio assegnato, ovvero quelli con il nome del regista valorizzato
 # fa il fill-down per la colonna anno
-# normalizza il separatore degli anni con più nazioni vincitrici
+# "normalizza" il separatore degli anni con più nazioni vincitrici, da "/ " a "|"
 
 tail -n +2 ./table.csv | \
 mlr --csv filter -S '$Regista =~ ".+"' \
@@ -25,7 +25,7 @@ then put '$Nazione=gsub($Nazione,"/ +","|")' >./leoni.csv
 rm ./table.csv
 
 # estrai la colonna Nazione
-# esplodi in verticale le celle, in presenza del separaratore | per gli anni con più nazioni premiate
+# separa in verticale le celle con con più nazioni premiate
 # conteggia per valori distinti di Nazione
 # ordina per Nazione
 mlr --csv cut -o -f Nazione \
