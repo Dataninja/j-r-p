@@ -5,6 +5,7 @@
 - [htmltable2flatgrid](https://github.com/aborruso/htmltable2flatgrid/blob/master/htmltable2flatgrid.py)
 - [miller](https://github.com/johnkerl/miller).
 
+## Script bash
 
 ```bash
  # estrai la terza tabella dalla pagina di wikipedia
